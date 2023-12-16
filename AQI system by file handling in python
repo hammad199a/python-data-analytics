@@ -1,0 +1,14 @@
+def temprature(filename):
+  with open(filename,'w') as s:
+    s.write("City,AQI\n")
+
+
+def data(filename):
+  city=["Lahore","faislabad","multan","islamabad"]
+  for  x in city:
+    new=input(f'enter the temprature fo day {x}: ')
+    with open(filename,'a') as d:
+      d.write(f'{x} ,{new}\n')
+      
+temprature("data.csv")
+data("data.csv")      
