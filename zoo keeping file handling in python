@@ -1,0 +1,12 @@
+import pandas as pd
+animal=["elephant","lion","girrafe","monkey"]
+weight=[]
+for w in animal:
+   x=input(f'enter the weight of {w}: ')
+   weight.append(x)
+zoo={"Animals":animal,"Weight":weight}
+df=pd.DataFrame(zoo)
+with open ("zoo.txt","w") as keep:
+ keep.write("animal,weight \n")
+ for i in range(len(animal)):
+  keep.write(f'{animal[i]} {weight[i]}\n')
